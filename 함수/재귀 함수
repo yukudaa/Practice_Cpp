@@ -1,0 +1,30 @@
+// recursion
+
+```c
+void rec(int n) {
+	if(n > 5) return;
+	printf("n = %d\n",n);
+	rec(n + 1);
+}
+
+int main() {
+	rec(1);
+}
+// 1 2 3 4 5
+```
+
+```c
+// 팩토리얼
+// 5! = 5*4*3*2*1
+
+int factorial(int n) {
+	if(n == 1) return 1;
+	return n * factorial(n -1);
+}
+
+int main() {
+	printf("%d\n", factorial(3));
+}
+
+// 6
+```
