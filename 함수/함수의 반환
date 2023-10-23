@@ -1,0 +1,69 @@
+```c
+int main() {
+	int a;
+	a = printf("aaa\n");
+	printf("%d\n", a); // 4
+}
+```
+
+```c
+// 2개의 매개변수의 합을 반환
+int plus(int a, int b) {
+	return a+b;
+}
+
+int main() {
+	int sum = plus(3,5);
+	printf("%d\n",sum);
+}
+```
+
+```c
+// 2개의 매개변수의 합을 반환
+int noMeaning() {
+	printf("first\n");
+	return 1;
+	printf("second\n");
+	return 2;
+}
+
+int main() {
+	int a = noMeaning();
+	printf("반환된 값 %d\n",a); // first 1 (return 만나면 함수 종료)
+}
+```
+
+```c
+#include <stdio.h>
+
+// 전역 변수
+int itemCnt = 0;
+int money = 100;
+
+int buyItem(int cost, int cnt) { // 매개변수
+	// 아이템을 산다
+
+	if(money < cost) {
+		printf("잔액이 부족합니다.\n") return -1;
+	}
+
+		itemCnt += cnt;
+		money -= cost;
+		printf("아이템을 구매했습니다. \n");
+		printf("아이템 개수 : %d\n", itemCnt);
+		printf("잔액 : %d\n",money);
+		return 0;
+}
+
+int main() {
+
+	int result;
+	result = buy(3000, 5);	
+
+	int a; // 지역 변수
+	buyItem(30, 5);
+
+	buyItem(40, 7);
+
+}
+```
